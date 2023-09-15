@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bs5  -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <!-- maiCss -->
+    <link rel="stylesheet" href="style.css">
+    <title>QuizApp</title>
+</head>
+<body class="h-100 d-flex  align-items-center flex-column" >
+  <div class="d-flex align-items-center  w-100 justify-content-center gap-5  ">
+    <h2 class="text-dark mt-2" id="userData"></h2>
+    <button onclick="leavePage()" class=" rounded-2 rounded px-3 align-items-center">Log Out</button>
+
+  </div>
+<h1 class="text-white">Quiz App</h1>
+<div class="d-flex align-items-center flex-column gap-4 text-white ">
+  <div  class="d-flex align-items-center gap-3">
+    <p class="m-0 secondpara">please Choose The Difficulty</p>
+    <select name="difficulty" id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+  </div>
+<div class="d-flex align-items-center flex-column">
+  <p class="text-white mt-4 secondpara">Please Choose Your Category</p>
+<div class="content ">
+    <div class="container">
+      <div class="row justify-content-center text-center p-0">
+        <div class="col p-0 ">
+          <div class="dropdown custom-dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-link" aria-haspopup="true" aria-expanded="false">
+              <span class="icon-keyboard_arrow_down border-white"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="mega-menu ">
+                <div class="d-flex justify-content-evenly align-items-center  w-100" >
+                  <ul class="list-unstyled d-flex " id="categoryList" >
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script src="main.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

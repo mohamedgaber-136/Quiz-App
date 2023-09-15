@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="End.css">
+    <title>End</title>
+</head>
+
+<body class="bg-dark">
+    <h1 class="block-effect" style="--td: 1.2s">
+        <div class="block-reveal text-white" style="--bc: #4040bf; --d: .5s">You Did Well </div>
+        <div class="block-reveal text-white" style="--bc: #bf4060; --d: 1s">But Not Enough
+            <button class=' rounded rounded-pill ' onClick='returnHome()'>PLay Again</button>
+        </div>
+    </h1>
+
+
+
+
+    <script>
+
+        let CurrentUser = JSON.parse(sessionStorage.getItem("CurrentUser"))
+        function returnHome() {
+            let newCurrentUser = {
+                name: CurrentUser.name,
+                score: 0,
+                lives: 3,
+                questionNum: 0
+            }
+            sessionStorage.setItem("CurrentUser", JSON.stringify(newCurrentUser));
+            location.replace("category.html");
+        }
+
+
+    </script>
+</body>
+
+</html>

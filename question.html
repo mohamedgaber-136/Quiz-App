@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bs5  -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <!-- maiCss -->
+    <link rel="stylesheet" href="style.css">
+    <title>QuizApp</title>
+</head>
+
+<body class="h-100 d-flex justify-content-center  align-items-center flex-column" id="body_">
+    <audio id="audioCorrect" src="new-level-142995.mp3" autoplay controls class="d-none"></audio>
+    <audio id="audioFalied" src="negative_beeps-6008.mp3" autoplay controls class="d-none"></audio>
+    <button onclick="leavePage()" class=" rounded-2 rounded px-3 align-items-center">Log Out</button>
+    <h2 class="text-dark mt-2" id="userData"></h2>
+
+
+    <h1 class="text-white">Quiz App</h1>
+    <p class="text-white m-0">Score: <b class="text-white" id="score"></b></p>
+    <div class="lifes d-flex gap-3" id="lifes">
+    </div>
+    <main class="container d-flex justify-content-center mt-3 align-items-center">
+        <div class="quizArea p-4  ">
+            <p id="question"></p>
+            <div class=" h-50 d-flex flex-column justify-content-center mt-5 mt-md-3 mt-lg-0 gap-3">
+                <div class="row " id="choices">
+                    <div class="col d-flex justify-content-end">
+                        <span class="text-white bg-dark"></span>
+                    </div>
+                    <div class="col  d-flex justify-content-start">
+                        <span class="text-white bg-dark"></span>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col d-flex justify-content-end">
+                        <span class="text-white bg-dark"></span>
+                    </div>
+                    <div class="col d-flex justify-content-start">
+                        <span class="text-white bg-dark"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="question.js"></script>
+    <script>
+        let userData = document.getElementById("userData");
+        userData.innerHTML = `Welcome ${CurrentUser.name} `;
+        function leavePage() {
+            sessionStorage.removeItem("CurrentUser");
+            location.replace('index.html')
+        }
+
+
+    </script>
+</body>
+
+</html>
